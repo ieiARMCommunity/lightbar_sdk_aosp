@@ -3,7 +3,7 @@
 ****
 ## Contents
 * [Overview](#Overview)
-* [JNI Library API definition](#JNI-API)
+* [JNI Library API definition](#jni-library-api-definition)
     * setLightBarUserLED
     * clearLightBarLED
     * setLightBarBreathMode
@@ -38,7 +38,7 @@ API Features:
 
 
 ****
-### <a name="JNI-API"></a>JNI Library API definition
+### <a name="jni-library-api-definition">JNI Library API definition</a>
 -----------
 
 #### setLightBarUserLED

@@ -3,11 +3,11 @@
 ****
 ## Contents
 * [Overview](#Overview)
-* [JNI Library API definition](#JNI_API)
+* [JNI Library API definition](#JNI-API)
     * setLightBarUserLED
     * clearLightBarLED
     * setLightBarBreathMode
-    * setLightBarHeartBeatMode
+    * setLightBarWaveMode
     * setLightBarPowerLedSuspendColor
     * setLightBarPowerLedPoweroffState
 * [How to import to Android Studio](#JNI_IMPORT)
@@ -38,11 +38,11 @@ API Features:
 
 
 ****
-### <a name="JNI_API"></a>JNI Library API definition
+### <a name="JNI-API"></a>JNI Library API definition
 -----------
 
 #### setLightBarUserLED
-It’s a useful API for one LED setting directly, note that calling this API can config one LED set at the same time, so user can implement a lopp to calling multiple LED set such as for loop.
+It’s an useful API for one LED setting directly, note that calling this API can config one LED set at the same time, so user can implement a loop to calling multiple LED set such as for loop.
 
 
 Prototype:
@@ -59,3 +59,39 @@ Prototype:
     Select green LED color, value is from "0" to "100"
     - Input argument 5: blue_brightness with int type
     Select blue LED color, value is from "0" to "100"
+   
+Example: setting 2nd light-bar and LED1-1 as blue light with 100% brightness, user can calling API as follows:
+   
+   
+    setLightBarUserLED("2", "1", "blue", "100");
+
+
+#### clearLightBarLED
+An useful API which can clear all USER-LED status to "turn off" status.
+
+Prototype:
+    
+    clearLightBarLED(JNIEnv *env, jobject thiz)
+    
+
+#### setLightBarBreathMode
+Force two light-bar into breath mode with one time period, if developer wants to running breath mode infinity, please create a service with thread first, and calling this api in a loop of thread. 
+
+Prototype:
+    
+    setLightBarBreathMode(JNIEnv *env, jobject thiz, jstring specific_color)
+    
+    - Input argument 1: specific_color with string type
+    a string prototype with color name as follows support list: “red”, “green”, “blue”, “yellow”, “cyan”, “magenta”, “white”, default color is blue
+    
+    
+#### setLightBarWaveMode
+Force two light-bar into wave mode with one time period, if developer wants to running wave mode infinity, please create a service with thread first, and calling this api in a loop of thread. 
+
+Prototype:
+    
+    setLightBarWaveMode(JNIEnv *env, jobject thiz, jstring specific_color)
+    
+    - Input argument 1: specific_color with string type
+    a string prototype with color name as follows support list: “red”, “green”, “blue”, “yellow”, “cyan”, “magenta”, “white”, default color is blue
+

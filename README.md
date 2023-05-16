@@ -13,14 +13,14 @@
     * setLightBarWaveMode
     * setLightBarPowerLedSuspendColor
     * setLightBarPowerLedPoweroffState
-* [How to import JNI to Android Studio](#JNI_IMPORT)
+* [How to import JNI to Android Studio](#how-to-import-jni-to-android-studio)
     * Import to CMAKE configuration
     * Bridge to Java project
     * Bridge to Kotlin project
     * Security 
 
 
-* [Frequently Asked Questions](#QA)
+* [Frequently Asked Questions](#frequently-asked-questions)
 
 
 ****

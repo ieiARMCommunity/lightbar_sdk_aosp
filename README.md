@@ -1,3 +1,5 @@
+<img src="images/lightbar-banner.png">
+
 # SDK for the LED Light-Bar on the IEI based Android OS
 [![Producer: IEI World](https://img.shields.io/badge/Producer-IEI_World-green.svg)](https://www.ieiworld.com)
 [![License: LGPL v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg)]([https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html](https://raw.githubusercontent.com/ieiDroidCommunity/lightbar_sdk_aosp/main/LICENSE))

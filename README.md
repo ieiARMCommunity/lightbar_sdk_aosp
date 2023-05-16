@@ -1,4 +1,6 @@
 # SDK for the LED Light-Bar on the IEI based Android OS
+[![Producer: IEI World](https://img.shields.io/badge/Producer-IEI_World-green.svg)](https://www.ieiworld.com)
+[![License: LGPL v2.1](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg)]([https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html](https://raw.githubusercontent.com/ieiDroidCommunity/lightbar_sdk_aosp/main/LICENSE))
 
 ****
 ## Contents
@@ -34,13 +36,15 @@ Support list:
 |IASO-W10B-IMX8M| Android 13|Coming soon|WIP|
 
 API Features:
-* Setting color for one set USER LED with 65535 colors
-* Setting Two light-bar as breath mode with a specific color
-* Setting Two light-bar as wave mode with a specific color
-* Setting a specific blinking color of suspend mode for POWER LED
-* Setting 'turn on' or 'turn off' red color for POWER LD in power-off mode
+* Setting color for one set User-LED with 65535 colors
+* Setting User-LED of Two light-bar as breath mode with a specific color
+* Setting User-LED Two light-bar as wave mode with a specific color
+* Setting a specific blinking color of suspend mode for Power-LED
+* Setting 'turn on' or 'turn off' red color for Power-LED in power-off mode
 
+LED defition as follows figure:
 
+<img src="images/lightbar.png" width="500">
 
 ****
 ### <a name="jni-library-api-definition">JNI Library API definition</a>

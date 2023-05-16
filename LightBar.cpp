@@ -1,6 +1,7 @@
 //
 // IEI World Corp.
 // Created by Wig Cheng on 2023/5/3
+// Revision: v1.0
 //
 #include "utils.h"
 #include <jni.h>
@@ -14,9 +15,9 @@ Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_setLightBarUserL
                                                                              jobject thiz,
                                                                              jint bar_num,
                                                                              jint led_num,
-                                                                             jint red_brightless,
-                                                                             jint green_brightless,
-                                                                             jint blue_brightless) {
+                                                                             jint red_brightness,
+                                                                             jint green_brightness,
+                                                                             jint blue_brightness) {
     char *BAR_PATH = (char*)NULL;
     char FINAL_PATH[128] = {0};
     char RED_BRIGHTNESS[4] = {0};
@@ -40,7 +41,7 @@ Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_setLightBarUserL
     if(file_fd < 0) {
         return;
     }
-    sprintf(RED_BRIGHTNESS, "%d", red_brightless);
+    sprintf(RED_BRIGHTNESS, "%d", red_brightness);
     write(file_fd, RED_BRIGHTNESS, strlen(RED_BRIGHTNESS));
     close(file_fd);
 
@@ -53,7 +54,7 @@ Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_setLightBarUserL
     if(file_fd < 0) {
         return;
     }
-    sprintf(GREEN_BRIGHTNESS, "%d", green_brightless);
+    sprintf(GREEN_BRIGHTNESS, "%d", green_brightness);
     write(file_fd, GREEN_BRIGHTNESS, strlen(GREEN_BRIGHTNESS));
     close(file_fd);
 
@@ -66,7 +67,7 @@ Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_setLightBarUserL
     if(file_fd < 0) {
         return;
     }
-    sprintf(BLUE_BRIGHTNESS, "%d", blue_brightless);
+    sprintf(BLUE_BRIGHTNESS, "%d", blue_brightness);
     write(file_fd, BLUE_BRIGHTNESS, strlen(BLUE_BRIGHTNESS));
     close(file_fd);
 }

@@ -251,7 +251,7 @@ Note that if you just deploy apk to target device directly, this apk will be an 
   ```
 
 * Best Solution
-  * Create fully support policy on Android BSP source code, it's not major topic here, but welcome to discuss with me how to fix SELinux policy issue if you need, my mail is sales@ieiworld.com
+  * Create fully support policy on Android BSP source code, it's not major topic here, but welcome to discuss with us how to fix SELinux policy issue if you need, our contact window is sales@ieiworld.com
 
 
 

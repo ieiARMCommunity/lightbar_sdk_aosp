@@ -3,9 +3,15 @@
 // Created by Wig Cheng on 2023/5/3
 // Revision: v1.0
 //
-#include "utils.h"
 #include <jni.h>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <unistd.h>
+#include <fcntl.h>
+#include <android/log.h>
 
+#define LOG_TAG "ieilightbar"
 static char *BAR_PATH_1 = "/sys/bus/i2c/drivers/tlc591xx/1-0060/leds";
 static char *BAR_PATH_2 = "/sys/bus/i2c/drivers/tlc591xx/3-0060/leds";
 

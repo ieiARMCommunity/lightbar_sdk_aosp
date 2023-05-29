@@ -21,8 +21,9 @@
     * Bridge to Java project
     * Bridge to Kotlin project
     * Security 
-
-
+* [Demo APK](#demo-apk)
+    * Quick start
+    * Source code
 * [Frequently Asked Questions](#frequently-asked-questions)
 
 
@@ -264,6 +265,45 @@ Note that if you just deploy apk to target device directly, this apk will be an 
 * Best Solution
   * Create fully support policy on Android BSP source code, it's not major topic here, but welcome to discuss with us how to fix SELinux policy issue if you need, our contact window is sales@ieiworld.com
 
+
+
+****
+### Demo APK
+-----------
+#### 1. Quick Start
+There's four pages in demo APK, first one on the left side is 'UserControl' page, as you can see, just select light-bar and LED number, and drag the bars, then you can change one set of the LED light-bar color immediately.
+
+UserControl page:
+
+![UserControl](images/ligitbar-demo-1.png)
+
+The 2nd page is UserFeature page, user can select 'BreathMode' or 'WaveMode' first and choose a specific color what you want, then click 'Run' button, the light-bars will start rung specific mode infinitely until click 'Stop' button.
+
+UserFeature page:
+
+![UserFeature](images/ligitbar-demo-2.png)
+
+The 3rd page is PowerSuspend page, user can choose a specific color what you want, and  click 'Save' button, the color will be saved in system, note that the setting valid after you have to reboot the system is necessary. User can press power key into suspend mode (press one time) to test this function works or not.
+
+PowerSuspend page:
+
+![PowerSuspend](images/ligitbar-demo-3.png)
+
+The rth page is PowerOff page, user can choose a specific status what you want, and  click 'Save' button, the state 'on' or 'off' will be saved in system, note that the setting valid after you have to reboot the system is necessary.  User can press power key into power off mode (press 3 secs and click power off) to test this function works or not.
+
+PowerOff page:
+
+![PowerOff](images/ligitbar-demo-4.png)
+
+
+#### 2. Source code
+Welcome to download the source code of this demo APK, the link as follows:
+
+[IEI Android: LightBar demo apk source code](https://github.com/QNAP-android-internal/IEI-AndroidLightBar.git)
+
+Note that our development environment is base on Android Studio ChipMunk, 2021.2.1 Canary 6, if your IDE revision is later than this one, please check your gradle version is match or not, if still not work, please contact your sales window to get more supporting. 
+
+In addition, this apk should be pre-installed in IEI Android OS by default configuration, if you want to customize own apk using this one, please rename the package name.
 
 
 ****

@@ -15,6 +15,7 @@
     * setLightBarWaveMode
     * setLightBarPowerLedSuspendColor
     * setLightBarPowerLedPoweroffState
+    * getLightBarPowerLedStatus
 * [How to import JNI to Android Studio](#how-to-import-jni-to-android-studio)
     * Import to CMAKE configuration
     * Bridge to Java project
@@ -143,6 +144,16 @@ Prototype:
     - Input argument 1: on_flag with a specific state to turn on or turn off
     a string prototype with state as follows support list: "on", "off", default state is "on"
 
+
+#### 7. getLightBarPowerLedStatus
+This API can get current Power-LED status no matter supsend color or poweroff state, very suitable for double checking after user call setting API.
+
+Prototype:
+    
+    getLightBarPowerLedStatus(JNIEnv *env, jobject thiz, jstring mode)
+    
+    - Input argument 1: mode which want to get suspend color or poweroff state, it's alternative
+    a string prototype with state as follows support list: use "suspend" to get string of color, and use "poweroff" to get state "on" or "off".
 
 
 ****

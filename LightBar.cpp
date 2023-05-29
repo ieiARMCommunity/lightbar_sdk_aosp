@@ -654,3 +654,38 @@ Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_setLightBarPower
 
     return 0;
 }
+
+extern "C"
+JNIEXPORT jstring JNICALL
+Java_com_ieiworld_testprogram_1prebuilt_1lightbar_NativeMethods_getLightBarPowerLedStatus(JNIEnv *env,
+                                                                                          jobject thiz,
+                                                                                          jstring mode) {
+    const char *target_mode_str = env->GetStringUTFChars(mode, 0);
+    FILE *ps;
+    char FINAL_CMD[64]={0}, MODE_BUF[32] = {0};
+    char GETS_BUF[32]={0}, RET_BUF[8] = {0};
+
+    if(strcmp(target_mode_str, "suspend") == 0)
+        sprintf(MODE_BUF, "leds.suspend_color");
+    else if(target_mode_str, "poweroff")
+        sprintf(MODE_BUF, "leds.poweroff_state");
+    else
+        return env->NewStringUTF("fail input parameter");
+
+    sprintf(FINAL_CMD, "fw_printenv %s", MODE_BUF);
+
+    if((ps = popen(FINAL_CMD, "r")) == NULL )
+        __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, "popen failed");
+
+    fgets(GETS_BUF, sizeof(GETS_BUF),ps);
+
+    if(strcmp(target_mode_str, "suspend") == 0)
+        sscanf(GETS_BUF,"leds.suspend_color=%s", &RET_BUF);
+    else if(strcmp(target_mode_str, "poweroff") == 0)
+        sscanf(GETS_BUF,"leds.poweroff_state=%s", &RET_BUF);
+
+    pclose(ps);
+
+    return env->NewStringUTF(RET_BUF);
+}
+

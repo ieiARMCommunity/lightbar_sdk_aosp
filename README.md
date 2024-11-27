@@ -38,7 +38,7 @@ Support list:
 |---|---|---|---|
 |IASO-W10B-IMX8M| Android 12|B664-12-R202 and above |&#10004;|
 |IASO-W10B-IMX8M| Android 13|B664-13-R33 and above |&#10004;|
-|IASO-W10B-IMX8M| Android 14|Coming soon|WIP|
+|IASO-W10B-IMX8M| Android 14|B664-14-R37 and above|&#10004;|
 
 API Features:
 * Setting color for one set User-LED with 65535 colors
